@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text } from '../Text'
 import style from './Navbar.module.css'
+import { ContentContainer } from '../ContentContainer'
 
 
 export const Navbar =() => {
@@ -8,7 +9,8 @@ export const Navbar =() => {
 
   return (
     <nav>
-        <div className={style.content}>
+        {/* <div className={style.content}> */}
+        <ContentContainer className={style.content}>
         <Text varient={'h2'} style={{ margin:0}}>CT shop</Text> <br/>
         < a href='/#' className={style.link}>Home</a>
         < a href='/#' className={style.link}>About</a>
@@ -16,7 +18,8 @@ export const Navbar =() => {
         <div className={style['profile-icon']}> <br/>
             <Text varient={'span'}>U</Text> <br/>
         </div>
-         </div>
+        </ContentContainer>
+         {/* </div> */}
         
     </nav>
   )
